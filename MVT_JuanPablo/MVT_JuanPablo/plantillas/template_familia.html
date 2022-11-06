@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Familia</title>
+</head>
+<body>
+    <body>
+           <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Fecha Nacimiento</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in mifamilia %}
+              <tr>
+                <td>{{item.nombre}}</td>
+                <td>{{item.edad}} Años</td>
+                <td>{{item.nacimiento|date:"d-m-Y"}}</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+   
+</body>
+</html>
